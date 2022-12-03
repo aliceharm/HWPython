@@ -19,7 +19,9 @@ if (k == 1) or (k == 0) or (k < 0):
 else:
     for i in range(k + 1):
         if i < k:
-            x += str(koef[i]) + "x^" + str(k-i)  +  " + " 
+            if koef[i] != 0:
+                x += str(koef[i]) + "x^" + str(k-i)  +  " + "
+
         else:
             x += str(koef[i])
     x += " = 0"
